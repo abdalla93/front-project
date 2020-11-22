@@ -1,0 +1,10 @@
+<div class="avatar">
+  <div  id="my-div-id">
+  </div>
+  <app-avatar-input *ngIf="!avatar.name"></app-avatar-input>
+  <div *ngIf="avatar.name">
+    <h5>Welcome {{avatar.name}}</h5>
+    <app-avatar-color  (changeColor)="changeColor($event)" ></app-avatar-color>
+    <app-avatar-glasses (changeGlasses)="changeGlasses($event)"  ></app-avatar-glasses>
+  </div>
+</div>
